@@ -8,26 +8,26 @@ const paraText = document.querySelector("p")
 //an array of all the searched for elements
 const allOurToasters = document.querySelectorAll(".toaster");
 
-let donutTotal = 0
-let autoClickerTotal = 0
+let donutCount = 0
+let autoClickerCount = 0
 let autoClickerCost = 100
 
 //list of required functions
 function addDonutForClick() {
-  donutTotal++
+  donutCount++
 }
 
 function displayDonutCount() {
-  bigText.innerText = "You now have " + donutTotal + " donuts!";
-  if (donutTotal < 200) {
-    let donutPixels = `${donutTotal}px`
+  bigText.innerText = "You now have " + donutCount + " donuts!";
+  if (donutCount < 200) {
+    let donutPixels = `${donutCount}px`
     paraText.style.fontSize = donutPixels
   }
 }
 
 function purchaseAutoClicker() {
   if (checkAutoClickerPrice()) {
-    donutTotal-=autoClickerCost
+    donutCount-=autoClickerCost
     increaseAutoClickerCount()
     increaseAutoClickerCost()
   } else {
@@ -36,7 +36,7 @@ function purchaseAutoClicker() {
 }
 
 function checkAutoClickerPrice() {
-  if (donutTotal >= autoClickerCost) {
+  if (donutCount >= autoClickerCost) {
     return true
   } else {
     return false
@@ -44,11 +44,11 @@ function checkAutoClickerPrice() {
 }
 
 function increaseAutoClickerCount() {
-  autoClickerTotal++
+  autoClickerCount++
 }
 
 function increaseAutoClickerCost() {
-  autoClickerCost+=10
+  autoClickerCost+=(autoClickerCost/10)
 }
 //Activates the Auto Clicker by applying clicks every second based on the Auto Clicker count
 //Resets the game state. This action should reset the game to zero donuts and zero Auto Clickers
@@ -68,7 +68,7 @@ button2.addEventListener("click", function () {
 
 //Button for testing purposes
 button3.addEventListener("click", function () {
-  donutTotal+=100
+  donutCount+=100
   displayDonutCount()
 })
 
