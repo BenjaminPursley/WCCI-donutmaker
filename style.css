@@ -44,7 +44,7 @@
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
+    padding: 15px 15px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
@@ -60,8 +60,7 @@
     z-index: 1;
 }
 
-/* Style the links inside the dropdown */
-.dropdown-content a {
+.dropdown-content * {
     float: none;
     color: black;
     padding: 12px 16px;
@@ -70,15 +69,19 @@
     text-align: left;
 }
 
+.dropdown-content a {
+    font-style: italic;
+}
+
 /* Add a dark background on topnav links and the dropdown button on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #555;
+    background-color: #777;
     color: white;
 }
 
 /* Add a grey background to dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #dddddd;
     color: black;
 }
 
