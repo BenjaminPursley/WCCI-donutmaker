@@ -1,44 +1,13 @@
-#navbar {
-    grid-area: navbar;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333
-}
-
-#navbar li {
-    float: left;
-}
-
-#navbar li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-#navbar li a:hover {
-    background-color: #111;
-}
-
-/* Add a black background color to the top navigation */
 .navbar {
     background-color: #333;
     overflow: hidden;
 }
 
-/* Dropdown container - needed to position the dropdown content */
 .dropdown {
     float: left;
     overflow: hidden;
 }
 
-/* Style the dropdown button to fit inside the topnav */
 .dropdown .dropbtn {
     font-size: 17px;
     border: none;
@@ -50,7 +19,6 @@
     margin: 0;
 }
 
-/* Style the dropdown content (hidden by default) */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -73,27 +41,20 @@
     font-style: italic;
 }
 
-/* Add a dark background on topnav links and the dropdown button on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: #777;
     color: white;
 }
 
-/* Add a grey background to dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: #dddddd;
+    background-color: #777;
     color: black;
 }
 
-/* Show the dropdown menu when the user moves the mouse over the dropdown button */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-
-
-
-
 header {
-    height: 50px;
+    height: 25px;
 }
