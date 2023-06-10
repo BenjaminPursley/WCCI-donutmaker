@@ -4,17 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css"/>
     <title>Donut Clicker - Ben P.</title>
   </head>
   <body>
+    <nav class="menu">
+      <div class="navbar" id="myTopnav">
+          <div class="dropdown">
+            <button class="dropbtn">Company Info</button>
+            <div class="dropdown-content">
+              <h3>Welcome!</h3>
+              <p>You have been contracted by Fred the Baker Baking Company to make some donuts. Fred the Baker is tired of making real donuts and is ready to retire. He needs your help to keep his love of donuts alive. So he had Ben make this game that uses button clicks to create virtual donuts for the world to enjoy. It's always "Time to make the Donuts" and Fred is too busy to click for himself. So get clickin'!</p>
+              <a href="https://en.wikipedia.org/wiki/Fred_the_Baker">Learn about Fred the Baker</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn" id="#cookie">Prefer Cookies?</button>
+            <div class="dropdown-content">
+              <p>Play the game that started it all.</p>
+              <a href="https://orteil.dashnet.org/cookieclicker/">Play Cookie Clicker</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn" id="#about">About the Developer</button>
+            <div class="dropdown-content">
+              <p>Learn about Ben Pursley, who made this html page for his WeCanCodeIT Bootcamp in 2023.</p>
+              <a href="https://benjaminpursley.github.io/">Ben's GitHub Page</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn" id="#options">Options</button>
+            <div class="dropdown-content">
+              <p>Congratulations! You found the secret developer options menu.</p>
+              <h6>(Go ahead, press the button!)</h6>
+              <button id="testing-button">add 100 donuts</button>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <header></header>
+
     <h1 id="donut-display">You have 0 donuts!</h1>
-    <button id="button1">Get Donut</button>
+    <button id="button1">Make Donut</button>
     <h3 id="auto-clicker-display">You have 0 auto-clickers.</h3>
     <h3 id="auto-clicker-price-tag">An auto-clicker currently costs 100 donuts.</h3>
     <button id="button2">Buy Auto-Clicker</button>
-    <button id="testing-button">add 100 donuts</button>
     <button id="button3">Reset Game</button>
-    <p>PILE OF DONUTS</p>
+    <p id="donut-pile">PILE OF DONUTS</p>
     <script src="./index.js"></script>
   </body>
 </html>
