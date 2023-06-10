@@ -2,6 +2,8 @@
 const button1 = document.getElementById("button1")
 const button2 = document.getElementById("button2")
 const button3 = document.getElementById("button3")
+const buttonTest = document.getElementById("testing-button")
+
 const donutDisplay = document.getElementById("donut-display")
 const autoClickerDisplay = document.getElementById("auto-clicker-display")
 const autoClickerPriceTag = document.getElementById("auto-clicker-price-tag")
@@ -21,7 +23,7 @@ function addDonutForClick() {
 
 function displayDonutCount() {
   donutDisplay.innerText = "You now have " + donutCount.toFixed(0) + " donuts!";
-  if (donutCount < 200) {
+  if (donutCount < 150) {
     let donutPixels = `${donutCount}px`
     paraText.style.fontSize = donutPixels
   }
@@ -60,6 +62,13 @@ function activateAutoClicker() {
 }
 
 //Resets the game state. This action should reset the game to zero donuts and zero Auto Clickers
+function resetGameState() {
+  donutCount = 0
+  autoClickerCount = 0
+  autoClickerCost = 100
+  displayDonutCount()
+  updateAutoClickerInfo()
+}
 
 //additional functions to satisfy assignment requirements
 function updateAutoClickerInfo() {
@@ -79,8 +88,12 @@ button2.addEventListener("click", function () {
   displayDonutCount()
 })
 
-//Button for testing purposes
 button3.addEventListener("click", function () {
+  resetGameState()
+})
+
+//Button for testing purposes
+buttonTest.addEventListener("click", function () {
   donutCount+=100
   displayDonutCount()
 })
