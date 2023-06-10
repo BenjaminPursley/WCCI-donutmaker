@@ -7,7 +7,7 @@ const buttonTest = document.getElementById("testing-button")
 const donutDisplay = document.getElementById("donut-display")
 const autoClickerDisplay = document.getElementById("auto-clicker-display")
 const autoClickerPriceTag = document.getElementById("auto-clicker-price-tag")
-const paraText = document.querySelector("p")
+const donutPile = document.getElementById("donut-pile")
 
 let donutCount = 0
 let autoClickerCount = 0
@@ -22,10 +22,10 @@ function addDonutForClick() {
 }
 
 function displayDonutCount() {
-  donutDisplay.innerText = "You now have " + donutCount.toFixed(0) + " donuts!";
+  donutDisplay.innerText = "You have " + donutCount.toFixed(0) + " donuts!";
   if (donutCount < 150) {
     let donutPixels = `${donutCount}px`
-    paraText.style.fontSize = donutPixels
+    donutPile.style.fontSize = donutPixels
   }
 }
 
