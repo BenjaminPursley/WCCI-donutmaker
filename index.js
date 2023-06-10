@@ -12,13 +12,16 @@ let donutCount = 0
 let autoClickerCount = 0
 let autoClickerCost = 100
 
+const AutoCounter = setInterval(activateAutoClicker, 1000)
+
+
 //list of required functions
 function addDonutForClick() {
   donutCount++
 }
 
 function displayDonutCount() {
-  bigText.innerText = "You now have " + donutCount + " donuts!";
+  bigText.innerText = "You now have " + donutCount.toFixed(0) + " donuts!";
   if (donutCount < 200) {
     let donutPixels = `${donutCount}px`
     paraText.style.fontSize = donutPixels
@@ -50,7 +53,12 @@ function increaseAutoClickerCount() {
 function increaseAutoClickerCost() {
   autoClickerCost+=(autoClickerCost/10)
 }
-//Activates the Auto Clicker by applying clicks every second based on the Auto Clicker count
+
+function activateAutoClicker() {
+  donutCount+=autoClickerCount
+  displayDonutCount()
+}
+
 //Resets the game state. This action should reset the game to zero donuts and zero Auto Clickers
 
 
